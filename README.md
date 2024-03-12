@@ -1,10 +1,4 @@
-## **Project archived**
-
-`nb-javac-android` has been merged with the [`AndroidIDE`](https://github.com/AndroidIDEOfficial/AndroidIDE) project.
-
-# nb-javac-android
-
-<a href="https://github.com/itsaky/AndroidIDE"><img src="https://androidide.com/github/img/androidide.php?part&for-the-badge"/></a><br>
+## nb-javac-android
 
 [nb-javac](https://github.com/oracle/nb-javac) is a patched version of OpenJDK "javac", i.e., the Java compiler. This has long been part of NetBeans, providing a highly tuned Java compiler specifically for the Java editor i.e., parsing and lexing for features such as syntax coloring, code completion.
 
