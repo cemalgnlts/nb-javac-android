@@ -56,8 +56,6 @@ module java.compiler {
     uses jdkx.tools.JavaCompiler;
 
     requires jdk.compiler;
-    requires jdk.compiler;
-    requires jdk.compiler;
 
     opens com.itsaky.androidide.config to jdk.compiler,jdk.jdeps;
 }
