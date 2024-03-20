@@ -38,6 +38,8 @@
 module java.compiler {
     exports com.itsaky.androidide.config;
     exports com.itsaky.androidide.zipfs2;
+    exports com.candlelight.nbja;
+
     exports javac.internal;
     exports javac.internal.jimage;
     exports javac.internal.jimage.decompressor;
@@ -53,7 +55,9 @@ module java.compiler {
     uses jdkx.tools.DocumentationTool;
     uses jdkx.tools.JavaCompiler;
 
-    requires jdk.compiler;
+    uses openjdk.source.util;
+    uses openjdk.tools.javac.api;
+    uses openjdk.tools.javac.file;
 
     opens com.itsaky.androidide.config to jdk.compiler,jdk.jdeps;
 }
