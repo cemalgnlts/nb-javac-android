@@ -89,7 +89,7 @@ class JavaCompilerHelper {
             return new SimpleJavaFileObject(file.toURI(), JavaFileObject.Kind.SOURCE) {
                 @Override
                 public CharSequence getCharContent(boolean ignoreEncodingErrors) throws IOException {
-                    return Files.readString(file.toPath());
+                    return new String(Files.readAllBytes(file.toPath()));
                 }
             };
         }).collect(Collectors.toList());
