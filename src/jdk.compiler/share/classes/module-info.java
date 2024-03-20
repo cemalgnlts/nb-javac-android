@@ -73,6 +73,8 @@ module jdk.compiler {
     requires transitive java.compiler;
 	requires java.logging;
 
+    exports com.candlelight.nbja;
+
     exports openjdk.source.doctree;
     exports openjdk.source.tree;
     exports openjdk.source.util;
