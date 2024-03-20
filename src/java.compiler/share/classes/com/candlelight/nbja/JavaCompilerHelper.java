@@ -15,15 +15,15 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarOutputStream;
 import java.util.stream.Collectors;
 
-import javax.tools.Diagnostic;
-import javax.tools.DiagnosticCollector;
-import javax.tools.JavaFileObject;
-import javax.tools.SimpleJavaFileObject;
-import javax.tools.StandardLocation;
+import jdkx.tools.Diagnostic;
+import jdkx.tools.DiagnosticCollector;
+import jdkx.tools.JavaFileObject;
+import jdkx.tools.SimpleJavaFileObject;
+import jdkx.tools.StandardLocation;
 
-import com.sun.source.util.JavacTask;
-import com.sun.tools.javac.api.JavacTool;
-import com.sun.tools.javac.file.JavacFileManager;
+import openjdk.source.util.JavacTask;
+import openjdk.tools.javac.api.JavacTool;
+import openjdk.tools.javac.file.JavacFileManager;
 
 class JavaCompilerHelper {
     private DiagnosticCollector<JavaFileObject> diagnostics = new DiagnosticCollector<>();

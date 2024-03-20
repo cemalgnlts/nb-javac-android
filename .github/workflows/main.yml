@@ -6,9 +6,10 @@ on:
   push:
     branches: [ main ]
 jobs:
-  build :
+  build:
     name: "Linux Build"
     runs-on: ubuntu-latest
+    
     steps: 
       - uses: actions/checkout@v4.1.2
       
@@ -37,4 +38,21 @@ jobs:
         if: ${{ !github.head_ref }}
         with:
           name: nb-javac-android
-          path: ./make/langtools/netbeans/nb-javac/dist/nb-javac-*-android.jar
+          path: "./make/langtools/netbeans/nb-javac/dist/nb-javac-*-android.jar"
+      
+      - name: "Delete tag and release"
+        uses: dev-drprasad/delete-tag-and-release@v1.0.1
+        with:
+          delete_release: true
+          tag_name: latest
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "Release to GitHub"
+        uses: ncipollo/release-action@v1
+        with:
+          name: "Latest Release"
+          tag: latest
+          commit: main
+          body: ${{ github.event.head_commit.message }}
+          artifacts: "./make/langtools/netbeans/nb-javac/dist/nb-javac-*-android.jar"
+          prerelease: true
