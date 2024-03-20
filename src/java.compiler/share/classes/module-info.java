@@ -53,10 +53,7 @@ module java.compiler {
     uses jdkx.tools.DocumentationTool;
     uses jdkx.tools.JavaCompiler;
 
-    requires openjdk.source.util;
-    requires openjdk.tools.javac.api;
-    requires openjdk.tools.javac.file;
-
     opens com.itsaky.androidide.config to jdk.compiler,jdk.jdeps;
+    opens com.candlelight.nbja to jdk.compiler,jdk.deps;
 }
 
