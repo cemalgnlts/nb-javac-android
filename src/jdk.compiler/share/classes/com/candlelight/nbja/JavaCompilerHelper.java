@@ -25,7 +25,7 @@ import openjdk.source.util.JavacTask;
 import openjdk.tools.javac.api.JavacTool;
 import openjdk.tools.javac.file.JavacFileManager;
 
-class JavaCompilerHelper {
+public class JavaCompilerHelper {
     private DiagnosticCollector<JavaFileObject> diagnostics = new DiagnosticCollector<>();
     private List<File> javaFiles = new ArrayList<>();
 
